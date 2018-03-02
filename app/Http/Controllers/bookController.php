@@ -3,9 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Book;
 
 class bookController extends Controller
 {
+
+    public $table='books';
+
+
+    public function prueba(){
+        $libros=Book::all();
+        return view('book.index')->with('libros',$libros);
+    }
+
+
     /**
      * Display a listing of the resource.
      *

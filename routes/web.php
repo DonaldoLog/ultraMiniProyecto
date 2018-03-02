@@ -31,3 +31,5 @@ Route::get('/adios',function(){
 Route::get('hola/{nombre}',function($nombre){
     return 'hola '.$nombre;
 });
+
+Route::get('libros','bookController@prueba')->name('libros.prueba');
